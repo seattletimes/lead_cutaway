@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <main ng-controller="hotspot">
+      <hotspot-map src="assets/cropped.jpg" data="spots" layer="current">
+        <b>Select a layer:</b>
+        <input type="radio" id="narrative" value="narrative" ng-model="$parent.current">
+        <label for="narrative">
+          <h2>Champion Arms Indoor Shooting Range</h2>
+          <h3>How and where it failed to protect workers</h3>
+        </label>
+        
+        <input type="radio" id="measurements" value="contamination" ng-model="$parent.current">
+        <label for="measurements">
+          <h2>Air and surface lead contamination</h2>
+          <h3>Based on 2006 inspection</h3>
+        </label>
+      </hotspot-map>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mobile: ~"(max-width: 480px)";
+@contamination-color: #C30;
+@narrative-color: #048;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+hotspot-map {
+  font-family: sans-serif;
+  position: relative;
+  display: block;
+
+  .image-container {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .spot {
+    position: absolute;
+    border-radius: 100%;
+    opacity: .5;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+
+    @media @mobile {
+      width: 40px;
+      height: 40px;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+
+    &.contamination {
+      background: @contamination-color;
+      // background: radial-gradient(@color 0%, @color 30%, fade(@color, 0%) 90%);
+    }
+
+    &.narrative {
+      background: @narrative-color;
+      // background: radial-gradient(@color 0%, @color 30%, fade(@color, 0%) 90%);
+    }
+
+    &:hover {
+      opacity: 1;
+      z-index: 999;
+
+      .popup {
+        display: block;
+      }
+    }
+  }
+
+  .ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    padding: 8px;
+    background: white;
+    background: rgba(255, 255, 255, .8);
+
+    @media @mobile {
+      position: relative;
+      width: 100%;
+    }
+
+    input[type=radio] {
+      display: none;
+
+      & + label {
+        display: block;
+        margin: 4px 0;
+        padding: 4px;
+        color: #888;
+        cursor: pointer;
+        // border-style: solid;
+        // border-color: #888;
+        // border-width: 1px;
+        // min-height: 4em;
+        // border-radius: 4px 0 0 4px;
+
+        &:last-child {
+          border-radius: 0 4px 4px 0;
+        }
+
+        @media @mobile {
+          width: 100%;
+          border-radius: 4px;
+          float: none;
+        }
+
+        h2 {
+          margin: 0;
+          font-size: 14px;
+          &::before {
+            content: " ";
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            display: inline-block;
+            text-align: center;
+            background: #CCC;
+            border-radius: 100%;
+            vertical-align: top;
+          }
+        }
+
+        h3 {
+          font-size: 13px;
+          font-weight: normal;
+          margin: 0;
+          margin-top: 4px;
+          padding-top: 4px;
+          display: block;
+          border-top: 1px solid #CCC;
+          text-transform: normal;
+        }
+      }
+
+      &:checked + label {
+        color: black;
+
+        h2::before {
+          content: "✔";
+          color: white;
+        }
+
+        &[for=narrative] h2::before {
+          background: @narrative-color;
+        }
+
+        &[for=measurements] h2::before {
+          background: @contamination-color;
+        }
+      }
+    }
+  }
+
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  display: none;
+  background: white;
+  border: 1px solid #CCC;
+  box-shadow: 0 0 16px rgba(0, 0, 0, .4);
+  width: 300px;
+  padding: 8px;
+
+  @media @mobile {
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: auto;
+    margin-top: 25px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &:hover {
+    display: block;
+  }
+
+  .popup-top & {
+    bottom: 100%;
+    top: auto;
+
+    @media @mobile {
+      bottom: auto;
+      top: auto;
+    }
+  }
+
+  .popup-left & {
+    right: 100%;
+    left: auto;
+
+    @media @mobile {
+      left: 5%;
+      right: 5%;
+    }
+  }
+
+  .graph {
+    margin-top: 10px;
+
+    label {
+      display: block;
+      font-size: 13px;
+    }
+
+    @bar-height: 1.5em;
+    .bar {
+      height: @bar-height;
+      line-height: @bar-height;
+
+      &.lead {
+        background: darkred;
+        width: 100%;
+        text-align: right;
+        padding-right: 4px;
+        color: white;
+      }
+
+      &.acceptable {
+        float: left;
+        background: gray;
+      }
+
+    }
+    .label {
+      line-height: @bar-height;
+      height: @bar-height;
+      float: left;
+    }
+  }
+}

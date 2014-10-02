@@ -1,0 +1,37 @@
+
+<div class="image-container">
+  <img class="backdrop" src="{{src}}">
+  <div 
+    class="spot {{layer}}"
+    ng-repeat="spot in data[layer]"
+    ng-class="{
+      'popup-left': spot.bounds.left > 50,
+      'popup-top': spot.bounds.top > 50
+    }"
+    ng-style="{
+      top: spot.bounds.top * 1.3 + '%',
+      left: spot.bounds.left + '%'
+    }"
+  >
+    <div class="popup">
+      <h1>{{spot.data.title}}</h1>
+      <div class="content">
+        {{spot.data.text}}
+      </div>
+      <div class="graph" ng-if="spot.data.lead">
+        <label>Lead measurement: {{spot.data.lead | number}}
+          <span ng-if="spot.data.unit == 2">mg/f<sup>2</sup></span>
+          <span ng-if="spot.data.unit == 3">mg/cm<sup>3</sup></span>
+        </label>
+        <div class="lead bar"></div>
+        <label>Acceptable level: {{spot.data.acceptable}}
+          <span ng-if="spot.data.unit == 2">mg/f<sup>2</sup></span>
+          <span ng-if="spot.data.unit == 3">mg/cm<sup>3</sup></span>
+        </label>
+        <div class="acceptable bar" ng-style="{ width: spot.data.acceptable / spot.data.lead * 100 + '%' }"></div>
+        <span class="label"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui" ng-transclude></div>
