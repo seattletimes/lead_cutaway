@@ -1,3 +1,4 @@
+/* global angular */
 require([
   "spots",
   "pym",
@@ -14,9 +15,9 @@ require([
   app.controller("hotspot", ["$scope", function($scope) {
       
       $scope.spots = spots;
-      $scope.current = "contamination";
+      $scope.current = "narrative";
 
-    }])
+    }]);
 
   angular.bootstrap(document.body, [app.name]);
   

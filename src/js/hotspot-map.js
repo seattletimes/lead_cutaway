@@ -1,3 +1,4 @@
+/* global angular */
 define([
   "application",
   "text!_hotspot-map.html"
@@ -13,7 +14,18 @@ define([
         src: "@"
       },
       link: function(scope, element, attr) {
+        var clicked = false;
+        element.on("click mouseenter", function(e) {
+          var target = angular.element(e.target);
+          var shown = this.querySelector(".show");
+          if (shown) {
+            angular.element(shown).removeClass("show");
+          }
+          if (target.hasClass("spot")) {
+            target.addClass("show");
+          }
+        });
       }
-    }
+    };
   });
 });

@@ -7,7 +7,7 @@ define(function() {
           left: 52
         },
         data: {
-          text: "Lead in air behind gun rental counter in retail lobby (outside of range): 1.5 times over acceptable level (74 mg/cm)",
+          text: "Airborne lead at the gun-rental counter: 1.5 times permissible level",
           lead: 74,
           acceptable: 50,
           unit: 3
@@ -19,10 +19,11 @@ define(function() {
           left: 40
         },
         data: {
-          text: "Lead on floor of shooting booth #5 (inside of range): 244 times over acceptable level (48,865 mg/sf)",
+          text: "Lead on the floor of a shooting booth: 244 times acceptable level",
           lead: 48865,
           acceptable: 200,
-          unit: 2
+          unit: 2,
+          photo: "shooting_bay.jpg"
         },
       },
       {
@@ -31,10 +32,11 @@ define(function() {
           left: 14
         },
         data: {
-          text: "Lead in air inside gun range during after-hours range cleaning: 46 times over acceptable level (2,300 mg/cm)",
+          text: "Airborne lead during after-hours range cleaning: 46 times permissible level",
           lead: 2300,
           acceptable: 50,
-          unit: 3
+          unit: 3,
+          photo: "sweeping_range.jpg"
         }
       },
       {
@@ -43,7 +45,7 @@ define(function() {
           left: 78
         },
         data: {
-          text: "Lead on top of soft-drink machine near retail lobby (outside of range): 1,153 times over acceptable level (23,056 mg/sf)",
+          text: "Lead on the top of a soft-drink machine near the lobby: 115 times acceptable level",
           lead: 23056,
           acceptable: 200,
           unit: 2
@@ -58,7 +60,8 @@ define(function() {
         },
         data: {
           title: "Employee at counter",
-          text: "A range master at Champion was overexposed to lead-contaminated air. By law, a range must ensure that an employee is not exposed to more than 50 micrograms of lead per cubic meter of air over eight hours. The range was cited for not providing protective gear, such as coveralls and respirators. "
+          text: "A range master at Champion was overexposed to lead-contaminated air. By law, a range must ensure that an employee is not exposed to more than 50 micrograms of lead per cubic meter of air over eight hours. The range was cited for not providing protective gear, such as coveralls and respirators. ",
+          photo: "range_counter.jpg"
         }
       },
       {
@@ -68,7 +71,8 @@ define(function() {
         },
         data: {
           title: "Employee in retail area",
-          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead when hired and every six months thereafter. Champion was cited for not doing this."
+          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead when hired and every six months thereafter. Champion was cited for not doing this.",
+          photo: "retail_counter.jpg"
         }
       },
       {
@@ -78,7 +82,8 @@ define(function() {
         },
         data: {
           title: "Ventilation",
-          text: "Champion failed to have a ventilation system that pulled dirty air away from shooters to the back of the range, where lead dust could be captured and removed. Champion didn’t perform ventilation checks every three months, as required."
+          text: "Champion failed to have a ventilation system that pulled dirty air away from shooters to the back of the range, where lead dust could be captured and removed. Champion didn’t perform ventilation checks every three months, as required.",
+          photo: "ventilation.jpg"
         }
       },
       {
