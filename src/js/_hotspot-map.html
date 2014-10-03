@@ -5,8 +5,7 @@
     class="spot {{layer}}"
     ng-repeat="spot in data[layer]"
     ng-class="{
-      'popup-left': spot.bounds.left > 50,
-      'popup-top': spot.bounds.top > 50
+      'popup-left': spot.bounds.left > 50
     }"
     ng-style="{
       top: spot.bounds.top * 1.3 + '%',

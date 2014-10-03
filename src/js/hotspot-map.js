@@ -14,7 +14,6 @@ define([
         src: "@"
       },
       link: function(scope, element, attr) {
-        var clicked = false;
         element.on("click mouseenter", function(e) {
           var target = angular.element(e.target);
           var shown = this.querySelector(".show");

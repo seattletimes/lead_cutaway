@@ -159,7 +159,11 @@ hotspot-map {
 
 .popup {
   position: absolute;
-  top: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   display: none;
   background: white;
   border: 1px solid #CCC;
@@ -169,19 +173,18 @@ hotspot-map {
 
   @media @mobile {
 
-    &, &.popup-top, &.popup-left {
+    &, .popup-left & {
       position: fixed;
       top: 5px !important;
       left: 3% !important;
       width: 94%;
       margin-top: 25px;
       bottom: auto !important;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
     }
-  }
-
-  .popup-top & {
-    bottom: 100%;
-    top: auto;
   }
 
   .popup-left & {
@@ -207,10 +210,21 @@ hotspot-map {
       width: 100%;
       max-width: 320px;
     }
+    @media (orientation: landscape) {
+      float: left;
+      width: 50%;
+
+      & + .content {
+        float: left;
+        width: 50%;
+        padding: 0 8px;
+      }
+    }
   }
 
   .graph {
     margin-top: 10px;
+    clear: both;
 
     label {
       display: block;
