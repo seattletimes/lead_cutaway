@@ -11,6 +11,8 @@ define([
         data: "=",
         layer: "=",
         src: "@"
+      },
+      link: function(scope, element, attr) {
       }
     }
   });
