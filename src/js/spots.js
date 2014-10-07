@@ -107,7 +107,7 @@ define(function() {
         },
         data: {
           title: "Owner in lane",
-          text: "Champion's owner Maria Geiss used a dry mop to sweep the firing-range floor, causing lead dust to become airborne. She should have cleaned the range with a HEPA (high-efficiency particulate air) vacuum, a squeegee or a wet mop."
+          text: "Champion’s owner Maria Geiss used a dry mop to sweep the firing-range floor, causing lead dust to become airborne. She should have cleaned the range with a HEPA (high-efficiency particulate air) vacuum, a squeegee or a wet mop."
         }
       },
       {
