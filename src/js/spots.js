@@ -7,7 +7,8 @@ define(function() {
           left: 52
         },
         data: {
-          text: "Airborne lead at the gun-rental counter: 1.5 times permissible level",
+          title: "1.5x permissible level",
+          text: "Airborne lead at the gun-rental counter",
           lead: 74,
           acceptable: 50,
           unit: 3
@@ -19,7 +20,8 @@ define(function() {
           left: 40
         },
         data: {
-          text: "Lead on the floor of a shooting booth: 244 times acceptable level",
+          title: "244x acceptable level",
+          text: "Lead on the floor of a shooting booth",
           lead: 48865,
           acceptable: 200,
           unit: 2,
@@ -32,7 +34,8 @@ define(function() {
           left: 14
         },
         data: {
-          text: "Airborne lead during after-hours range cleaning: 46 times permissible level",
+          title: "46x permissible level",
+          text: "Airborne lead during after-hours range cleaning",
           lead: 2300,
           acceptable: 50,
           unit: 3,
@@ -45,7 +48,8 @@ define(function() {
           left: 78
         },
         data: {
-          text: "Lead on the top of a soft-drink machine near the lobby: 115 times acceptable level",
+          title: "115x acceptable level",
+          text: "Lead on the top of a soft-drink machine near the lobby",
           lead: 23056,
           acceptable: 200,
           unit: 2
