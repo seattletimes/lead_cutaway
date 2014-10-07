@@ -4,20 +4,21 @@ define(function() {
       {
         bounds: {
           top: 34,
-          left: 52
+          left: 48
         },
         data: {
           title: "1.5x permissible level",
           text: "Airborne lead at the gun-rental counter",
           lead: 74,
           acceptable: 50,
-          unit: 3
+          unit: 3,
+          photo: "retail_counter.jpg"
         }
       },
       {
         bounds: {
-          top: 49,
-          left: 40
+          top: 41,
+          left: 38
         },
         data: {
           title: "244x acceptable level",
@@ -64,7 +65,7 @@ define(function() {
         },
         data: {
           title: "Employee at counter",
-          text: "A range master at Champion was overexposed to lead-contaminated air. By law, a range must ensure that an employee is not exposed to more than 50 micrograms of lead per cubic meter of air over eight hours. The range was cited for not providing protective gear, such as coveralls and respirators. ",
+          text: "A range employee at Champion was overexposed to lead-contaminated air. By law, a range must ensure that an employee is not exposed to more than 50 micrograms of lead per cubic meter of air over eight hours. The range was cited for not providing protective gear, such as coveralls and respirators. ",
           photo: "range_counter.jpg"
         }
       },
@@ -75,8 +76,7 @@ define(function() {
         },
         data: {
           title: "Employee in retail area",
-          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead every six months. Champion was cited for not doing this.",
-          photo: "retail_counter.jpg"
+          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead every six months. Champion was cited for not doing this."
         }
       },
       {
@@ -97,7 +97,7 @@ define(function() {
         },
         data: {
           title: "Soda machine",
-          text: "Gun ranges must maintain surfaces as free of lead as practicable. At Champion, state inspectors found lead dust coating the top of a soft-drink machine and on surfaces in the retail sales area."
+          text: "Gun ranges must maintain surfaces as free of lead as practicable. At Champion, state inspectors found lead dust coating the top of a soft-drink machine, on surfaces in the range rental area and on other surfaces."
         }
       },
       {
@@ -117,7 +117,7 @@ define(function() {
         },
         data: {
           title: "Double-door area",
-          text: "To open the door into the range, customers and workers should have had to use more force than usual, indicating suction or negative air flow. Champion’s range had the reverse: Opening the door blew lead particles onto people and into the lobby."
+          text: "To open the door into the range, customers and workers should have had to use more force than usual, indicating suction or negative air flow. Champion’s range had the reverse: Opening the door could have blown lead particles onto people and into the lobby."
         }
       }
     ]
