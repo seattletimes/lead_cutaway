@@ -75,7 +75,7 @@ define(function() {
         },
         data: {
           title: "Employee in retail area",
-          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead when hired and every six months thereafter. Champion was cited for not doing this.",
+          text: "When workers face exposure to high amounts of airborne lead, their employer must test their blood for lead every six months. Champion was cited for not doing this.",
           photo: "retail_counter.jpg"
         }
       },
