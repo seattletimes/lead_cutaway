@@ -14,11 +14,11 @@
   >
     <div class="popup">
       <h1>{{spot.data.title}}</h1>
-      <div class="photo" ng-if="spot.data.photo">
-        <img src="assets/photos/{{spot.data.photo}}">
-      </div>
       <div class="content">
         {{spot.data.text}}
+      </div>
+      <div class="photo" ng-if="spot.data.photo">
+        <img src="assets/photos/{{spot.data.photo}}">
       </div>
       <div class="graph" ng-if="spot.data.lead">
         <label>Lead measurement: {{spot.data.lead | number}}
