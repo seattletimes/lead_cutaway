@@ -36,7 +36,7 @@ define(function() {
         },
         data: {
           title: "46x permissible level",
-          text: "Airborne lead during after-hours range cleaning",
+          text: "Airborne lead during range cleaning",
           lead: 2300,
           acceptable: 50,
           unit: 3,
