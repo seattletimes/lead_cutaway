@@ -1,6 +1,6 @@
 
 <div class="image-container">
-  <img class="backdrop" src="{{src}}">
+  <img class="backdrop" ng-src="{{src}}">
   <div 
     class="spot {{layer}}"
     ng-repeat="spot in data[layer]"
@@ -12,13 +12,13 @@
       left: spot.bounds.left + '%'
     }"
   >
-    <div class="popup">
+    <figure class="popup">
       <h1>{{spot.data.title}}</h1>
       <div class="content">
         {{spot.data.text}}
       </div>
       <div class="photo" ng-if="spot.data.photo">
-        <img src="assets/photos/{{spot.data.photo}}">
+        <img ng-src="assets/photos/{{spot.data.photo}}">
       </div>
       <div class="graph" ng-if="spot.data.lead">
         <label>Lead measurement: {{spot.data.lead | number}}
@@ -36,7 +36,7 @@
         <div class="acceptable bar" ng-style="{ width: spot.data.acceptable / spot.data.lead * 100 + '%' }"></div>
         <span class="label"></span>
       </div>
-    </div>
+    </figure>
   </div>
 </div>
 <div class="ui" ng-transclude></div>
