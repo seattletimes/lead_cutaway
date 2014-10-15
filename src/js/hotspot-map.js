@@ -14,7 +14,7 @@ define([
         src: "@"
       },
       link: function(scope, element, attr) {
-        element.on("click", function(e) {
+        element.on("click touchstart", function(e) {
           var target = angular.element(e.target);
           var shown = this.querySelector(".show");
           if (shown) {
@@ -22,6 +22,7 @@ define([
           }
           document.body.style.minHeight = null;
           if (target.hasClass("spot")) {
+            e.preventDefault();
             target.addClass("show");
             //this is a workaround for Pym sizes, and should not be used in standalone pages
             setTimeout(function() {
@@ -29,9 +30,9 @@ define([
               var popupBounds = popup.getBoundingClientRect();
               var bodyBounds = document.body.getBoundingClientRect();
               if (popupBounds.bottom > bodyBounds.height) {
-                document.body.style.minHeight = popupBounds.bottom + "px"
+                document.body.style.minHeight = popupBounds.bottom + "px";
               }
-            })
+            });
           }
         });
       }
